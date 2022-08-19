@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            /* background-color: #ccc; */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            height: 50px;
+        }
+
+        .nav-left,
+        .nav-middle,
+        .nav-right {
+            width: 33.333333%;
+            height: 100%;
+            border: 1px solid red;
+        }
+
+        .nav-middle {
+            text-align: center;
+        }
+
+        .nav-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .buy-links-area {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .buy-links-area ul {
+            list-style: none;
+            padding-left: 0;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .buy-links-area ul li {
+            margin: 0 10px;
+            padding-right: 20px;
+            border-right: 1px solid #ccc;
+        }
+
+        .buy-links-area ul li:last-child {
+            border-right: none;
+        }
+
+        .buy-links-area ul li a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .product-area {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            width: 100%;
+            /* border: 1px solid blue; */
+            padding: 0 15px;
+        }
+
+        @media screen and (min-width:576px) {
+            .col {
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width:992px) {
+            .col {
+                width: 33.333333%;
+            }
+        }
+
+        .img-wrap {
+            /* height: 300px; */
+            background-color: #faf;
+            aspect-ratio: 9/16;
+
+        }
+
+        .img-wrap img {
+            width: 100%;
+            height: 100%;
+
+            /* height: 0;
+            padding-top: 150%; */
+            object-fit: cover;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-left">nav-left</div>
+            <div class="nav-middle">nav-middle</div>
+            <div class="nav-right">nav-right</div>
+        </nav>
+
+        <main>
+            <div class="buy-links-area">
+                <ul>
+                    <li>
+                        <a href="#">Tops</a>
+                    </li>
+                    <li>
+                        <a href="#">Bottoms</a>
+                    </li>
+                    <li>
+                        <a href="#">Sale</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="product-area">
+
+                <div class="col">
+                    <div class="myCard">
+                        <div class="img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg?format=1000w"
+                                alt="">
+                        </div>
+                        <h3>Lounge Tunic</h3>
+                        <p>$50.00</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="myCard">
+                        <div class="img-wrap">
+                        </div>
+                        <h3>Lounge Tunic</h3>
+                        <p>$50.00</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="myCard">
+                        <div class="img-wrap">
+                        </div>
+                        <h3>Lounge Tunic</h3>
+                        <p>$50.00</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="myCard">
+                        <div class="img-wrap">
+                        </div>
+                        <h3>Lounge Tunic</h3>
+                        <p>$50.00</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+    </div>
+    </main>
+    </div>
+</body>
+
+</html>
